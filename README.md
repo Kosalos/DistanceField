@@ -22,7 +22,7 @@ If I increase the nmber of spheres past 32 (in shader.h), I get the run-time err
 I have many things to get past this, but no success. \
 Money is no problem. \
 Please make the necessary changes to the shader to allow for many more spheres, \
-then name you price to teach me what you did.
+then name your price to teach me what you did.
 
 thanks \
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ 
