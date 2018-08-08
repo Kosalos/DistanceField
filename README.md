@@ -14,7 +14,7 @@ Slide finger on widgets to change respective parameter. \
 P1...PB affect fields in the lighting routines,  'Size' is the sphere sine control. \
 Press 'AutoChange' to enable automatic param changes.
 
-/////////////////////////////////////
+///////////////////////////////////// \
 Be sure to try out all the base objects and operators.
 Here is a way to see the Subtraction operater in action:
 
@@ -45,7 +45,7 @@ float scene(float3 pos,Control control) {\
     dist = max(-iDist,dist);
 
     return dist;
-}
+} \
 /////////////////////////////////////
 
 
