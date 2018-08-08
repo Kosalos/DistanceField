@@ -23,31 +23,31 @@ float scene(float3 pos,Control control) {\
     float dist = 999.9;\
     float3 p;\
     int skipIndex = 8;\
-    int skipIndex2 = 14;\
+    int skipIndex2 = 14;
 
-    for(int i=0;i<NUM_OBJECT;++i) {\
-        if(i == skipIndex || i == skipIndex2) continue;\
+    for(int i=0;i<NUM_OBJECT;++i) {
+        if(i == skipIndex || i == skipIndex2) continue;
         
         p = pos - control.obj[i].pos.xyz;  //  <- hardwired to do Sphere distance field
         
-        iDist = length(p) - control.pC * control.obj[i].param[0];\
-        dist = min(iDist,dist);\
+        iDist = length(p) - control.pC * control.obj[i].param[0];
+        dist = min(iDist,dist);
     }
 
-    // now subtract sphere1\
-    p = pos - control.obj[skipIndex].pos.xyz;\
-    iDist = length(p) - control.pC * control.obj[skipIndex].param[0];\
+    // now subtract sphere1
+    p = pos - control.obj[skipIndex].pos.xyz;
+    iDist = length(p) - control.pC * control.obj[skipIndex].param[0];
     dist = max(-iDist,dist);
 
-    // subtract sphere2\
-    p = pos - control.obj[skipIndex2].pos.xyz;\
-    iDist = length(p) - control.pC * control.obj[skipIndex2].param[0];\
+    // subtract sphere2
+    p = pos - control.obj[skipIndex2].pos.xyz;
+    iDist = length(p) - control.pC * control.obj[skipIndex2].param[0];
     dist = max(-iDist,dist);
 
     return dist;
-} \
+} 
 /////////////////////////////////////
-
+(having to add backslashes to all the lines is a Github pain)
 
 
 
